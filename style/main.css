@@ -107,16 +107,6 @@ section {
   margin-bottom: var(--trailing-space, 1em);
 }
 
-
-
-
-
-
-
-
-
-
-
 .spacing > * + * {
   margin-top: var(--spacer, 4rem);
 }
