@@ -1,0 +1,154 @@
+/* reset the box sizing because it makes styling so much easier */
+/* always add this at the beginning of css files  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* classic resets to do for all css are setting the body margin, line height,
+ the image max width and display, and margin for h1,2,3 and p  */
+/* start off css designing for mobile and try to design generic/reusable
+ classes first */
+html {
+  
+  scroll-behavior: smooth;
+}
+
+body {
+ 
+  background-image: url('/images/the.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  
+  padding-top: 120px;
+  
+  color: rgb(255, 255, 255);
+}
+
+.image__container {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+div,
+.btn {
+  font-family: "Exo 2", sans-serif;
+}
+
+a {
+  color: #6262ff;
+}
+
+section {
+  padding: 5em 0;
+}
+
+.container {
+  width: 85%;
+  /* 65 * 16 will translate em to pixels  */
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.column > * {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+
+.btn {
+ 
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  /* different approach to css variables where we didn't declare it in the beginning */
+  background: var(--clr-accent, #6a6aff);
+  color: var(--clr-text, white);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out, opacity 175ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.hamburger__menu {
+  height: 1em;
+  border-bottom: 0.25em solid black;
+  border-radius: 2px;
+  margin: 0 1em;
+  width: 2em;
+}
+
+.trailing__space {
+  margin-bottom: var(--trailing-space, 1em);
+}
+
+
+
+
+
+
+
+
+
+
+
+.spacing > * + * {
+  margin-top: var(--spacer, 4rem);
+}
+
+.hero {
+  
+  color: white;
+  text-shadow: 0 1px 2px black;
+  text-align: center;
+  padding: 5em 0;
+  background-image: rgb(255, 255, 255);
+  /* to fix repeating transparent image, bring in a radial gradient 
+        radial-gradient(#444, #111) */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@supports (background-blend-mode: lighten) {
+  .hero {
+    background-color: #000000; 
+    
+   
+    /* allows you to blend layers - really nice for blending images and colors or gradients  */
+    background-blend-mode: lighten;
+  }
+}
+.hero .container {
+  border: 2px solid white;
+  padding: 2em;
+ 
+}
+
+
+
+
