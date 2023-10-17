@@ -49,7 +49,7 @@ div,
 }
 
 a {
-  color: #6262ff;
+  color: #62fff7;
 }
 
 section {
@@ -126,7 +126,7 @@ section {
 }
 @supports (background-blend-mode: lighten) {
   .hero {
-    background-color: #000000; 
+    background-color: #246323; 
     
    
     /* allows you to blend layers - really nice for blending images and colors or gradients  */
@@ -134,7 +134,7 @@ section {
   }
 }
 .hero .container {
-  border: 2px solid white;
+  border: 2px solid rgb(241, 206, 206);
   padding: 2em;
  
 }
